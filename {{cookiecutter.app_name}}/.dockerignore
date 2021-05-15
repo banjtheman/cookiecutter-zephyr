@@ -1,0 +1,5 @@
+**/.gitignore
+*.egg-info/
+README.md
+test_coverage_report/
+test_report/

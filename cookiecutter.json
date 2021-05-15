@@ -1,5 +1,5 @@
 {
-    "directory_name": "Hello",
-    "file_name": "Howdy",
+    "app_name": "my_project",
+    "desc": "My project Description",
     "greeting_recipient": "Julie"
 }
