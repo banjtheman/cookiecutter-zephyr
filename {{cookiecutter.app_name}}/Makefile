@@ -40,7 +40,6 @@ help:
 	@echo "This makefile holds the following targets"
 	@echo "  help                        Print help documentation"
 	@echo "  black                       Run Python's Black formatter on the code"
-	@echo "  black_check                 Run Python's Black formatter on the code in check mode. Fail if black needs to be run. Good for CI"
 	@echo "  build_image                 Build the Docker Images"
 	@echo "  build_package               Build the Python Package (using setuptools)"
 	@echo "  clean                       Clean Python Package Data (Tests/Eggs/Cache)"
@@ -60,7 +59,7 @@ help:
 
 todo:
 	# Get all package TODOs
-	grep -rE "TODO" rib | egrep .py | egrep -v .html | egrep -v .eggs | egrep -v .pyc
+	grep -rE "TODO" | egrep .py | egrep -v .html | egrep -v .eggs | egrep -v .pyc
 
 mypy:
 	# Run Mypi on the package
@@ -68,7 +67,7 @@ mypy:
 
 pycodestyle:
 	# Run Pycodestyle on the package
-	python3 -m pycodestyle --config=.pycodestylerc rib
+	python3 -m pycodestyle --config=.pycodestylerc
 
 pylint:
 	# Run Pylint on the package
@@ -76,12 +75,7 @@ pylint:
 
 black:
 	# Run Black on the package
-	python3 -m black --config=.blackrc.toml rib
-
-black_check:
-	# Run Black on the package to see if files would change, but do not change them
-	# Will fail if files are left to change (need to run make black)
-	python3 -m black --config=.blackrc.toml --check rib
+	python3 -m black --config=.blackrc.toml
 
 
 ###
@@ -103,11 +97,11 @@ test_unit:
 
 
 build_package:
-	# Build the RiB Python Package (using setuptools)
+	# Build the Python Package (using setuptools)
 	pip install --editable .
 
 build_image:
-	# Build the RiB Docker Image
+	# Build the Docker Image
 	docker-compose build
 
 
