@@ -1,7 +1,7 @@
-{{cookiecutter.project_name}}
+{{cookiecutter.app_name}}
 ==============================
 
-{{cookiecutter.description}}
+{{cookiecutter.desc}}
 
 ## Overview
 
