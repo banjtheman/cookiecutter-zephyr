@@ -1,0 +1,6 @@
+{
+    "project_name": "{{cookiecutter.app_name}}",
+    "project_desc": "{{cookiecutter.desc}}",
+    "pipelines": [],
+    "modules": []
+}
