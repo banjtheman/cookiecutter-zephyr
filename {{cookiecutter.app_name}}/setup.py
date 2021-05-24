@@ -167,7 +167,7 @@ def main():
         author="{{cookiecutter.app_name}}",
         author_email="TODO: FILL ME IN",
         classifiers=[
-            "Development Status :: 1 - Protoype",
+            "Development Status :: 1 - Planning",
             "Intended Audience :: Developers",
             "Natural Language :: English",
             "Programming Language :: Python",
