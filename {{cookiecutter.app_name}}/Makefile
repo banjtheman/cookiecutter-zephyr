@@ -15,7 +15,7 @@
 # todo                        Get project TODOs
 #
 # Example Call:
-#    make build VERSION=0.9.0
+#    make build_image
 # -----------------------------------------------------------------------------
 
 
@@ -83,7 +83,7 @@ black:
 ###
 
 
-test: test_unit test_scripts
+test: test_unit
 	# Run all test steps
 
 test_unit:
